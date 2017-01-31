@@ -1,7 +1,25 @@
-'use strict';
+import Vorpal from 'vorpal';
 
-export default {
-  greet(){
-    return 'Hello World';
-  }
-}
+const vorpal = Vorpal();
+
+vorpal
+  .command('foo')
+  .action(args => {
+    // console.log(args);
+  });
+
+vorpal
+  .delimiter('recipes >')
+  .show();
+
+// export default vorpal;
+
+// Vorpal
+//   .command('foo')
+//   .action((args) => {
+//     console.log(args);
+//   });
+//
+// Vorpal.show();
+//
+// export default Vorpal;
